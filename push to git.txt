@@ -32,7 +32,7 @@ git status
 git init
 git add .
 git commit -m "Commit note here"
-git remote add origin https://github.com/mahfuz31/git-authentication-from-win_linux-machine.git
+git remote add origin https://github.com/mahfuz31/xzypath.git
 git push -u origin main
 
 *************************************************************************************************
