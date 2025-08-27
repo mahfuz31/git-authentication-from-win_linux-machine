@@ -27,13 +27,21 @@ branch -M main ensures your branch is named main (matches GitHub’s default).
 -u origin main sets upstream so future git push/git pull works easily.
 
 
-
+***********************************************************************************************
+git status
 git init
 git add .
-git commit -m "Initial commit: documented Git authentication method"
+git commit -m "Commit note here"
 git remote add origin https://github.com/mahfuz31/git-authentication-from-win_linux-machine.git
-git pull origin main --rebase # If needed to integrate the remote change
 git push -u origin main
 
+*************************************************************************************************
 
-git push -u origin main --force # Only if you’re 100% sure you want your local repo to replace GitHub’s content
+
+git pull origin main --rebase	# If needed to integrate the remote change; Use it prior to git push 
+git push -u origin main --force 	# Only if you’re 100% sure you want your local repo to replace GitHub’s content
+
+git branch -M main 			# “move/rename branch, forcefully.”
+
+git remote add origin https://github.com/mahfuz31/xyz.git 			
+						# We need to use this command once per local repo to connect it with GitHub. After that, Git remembers that origin points to this GitHub repo.
