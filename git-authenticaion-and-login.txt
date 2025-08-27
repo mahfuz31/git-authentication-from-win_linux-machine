@@ -1,0 +1,71 @@
+   git config --global user.name "mahfuz31"
+   git config --global user.email "mahfuz.knu@gmail.com"
+
+Git Authentication from windows working machine:
+---------------------------------------------------------------------------------
+
+Open PowerShell as Administrator
+
+Close your current PowerShell / VS Code terminal.
+
+Click Start → type “PowerShell” → right-click → Run as Administrator.
+
+ssh-keygen -t ed25519 -C "mahfuz.knu@gmail.com"
+
+Start the ssh-agent service:
+---------------------------------------------------------------------------
+
+Start-Service ssh-agent
+Set-Service -Name ssh-agent -StartupType Automatic  # to make the service automatic
+
+This will allow Windows to always start the agent when you log in.
+
+Add your SSH key 
+
+Still in this elevated PowerShell window:
+ssh-add C:\Users\Mahfuz\.ssh\id_ed25519    # Replace Mahfuz with your actual Windows user.
+
+
+Git Authentication from Linux working machine:
+---------------------------------------------------------------------------------
+ssh-keygen -t ed25519 -C "mahfuz.knu@gmail.com"
+
+Start the agent:
+-------------------------
+eval "$(ssh-agent -s)"
+
+Add the key:
+---------------------------
+ssh-add ~/.ssh/id_ed25519
+
+
+
+
+Add your public key to GitHub:
+-----------------------------------------------------------------------------------
+cat ~/.ssh/id_ed25519.pub
+
+
+
+Test the SSH connection:
+----------------------------------------------------------------------------
+ssh -T git@github.com
+
+Now try to Push:
+------------------------------------------------------
+git push -u origin main
+
+
+
+   git config list
+
+   git config core.autocrlf true
+
+   git init
+   git add .
+   git commit -m "Jenkinsfile added"
+
+   git push origin main
+		or
+  git branch -M main
+  git push -u origin main
