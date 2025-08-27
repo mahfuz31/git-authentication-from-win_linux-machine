@@ -27,11 +27,24 @@ Important
 git remote add origin https://github.com/mahfuz31/xzypath-of-this-repository.git 			
 						# We need to use this command once per local repo to connect it with GitHub. After that, Git remembers that origin points to this GitHub repo.
 
+git pull origin main --rebase 	# git pull --rebase brings remote commits into your local branch. Then push works fine.
+
 
 git pull origin main --rebase	# If needed to integrate the remote change; Use it prior to git push 
 git push -u origin main --force 	# Only if you’re 100% sure you want your local repo to replace GitHub’s content
 
 git branch -M main 			# “move/rename branch, forcefully.” Use is 
+
+
+ If 
+ERROR: Repository not found.
+fatal: Could not read from remote repository. 
+Please make sure you have the correct access rights
+Such error occurs after push to git:
+--------------------------------------------------------------------------------
+git remote -v
+git remote set-url origin https://github.com/mahfuz31/jenkinsfile-practice.git   # 
+git remote -v
 
 
 

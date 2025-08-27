@@ -1,0 +1,26 @@
+git add .
+git commit -m "Jenkins file practice"
+git remote set-url origin https://github.com/mahfuz31/jenkinsfile-practice.git
+git remote add origin https://github.com/mahfuz31/jenkinsfile-practice.git
+git pull origin main --rebase
+git push -u origin main
+
+git push -u origin main
+
+
+git add .
+git commit -m "Initial commit: documented Git authentication method"
+
+git push -u origin main
+
+
+
+
+
+
+
+
+git add .
+git commit -m "Initial commit: documented Git authentication method"
+git remote add origin https://github.com/mahfuz31/path-of-this-reposiroty.git
+git push -u origin main
